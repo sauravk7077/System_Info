@@ -1,6 +1,5 @@
 body{
-    --granny-smith-apple: #AAFCB8;
-    --apple-dark: hsl(130, 93%, 20%);
+    --granny-smith-apple: hsl(174, 95%, 8%);
     background-color: var(--granny-smith-apple);
     font-family: 'Roboto Slab', serif;
 }
@@ -30,10 +29,10 @@ nav.nav ul li{
 
 nav.nav ul li a{
     text-decoration: none;
-    color: var(--apple-dark);
+    color: hsl(174, 95%, 70%);
 }
 nav.nav ul li:hover{
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: hsl(174, 95%, 40%);
     animation: fade-in 1s;
 }
 
@@ -51,17 +50,19 @@ Content
     width: 90vw;
     margin: auto;
     padding: 10px 0 20px 0;
-    background-color: hsl(130, 93%, 90%);
+    background-color: hsl(174, 95%, 12%);
     border-radius: 10px;
 }
 h1{
     margin: 20px;
     font-family: 'Lobster Two', cursive;
+    color: aquamarine;
 }
 
 .data-container{
     width: 100%;
-    background-color: hsl(130, 83%, 83%);
+    background-color: hsl(174, 95%, 14%);
+    color: hsl(174, 95%, 70%);
 }
 
 .info-group{
@@ -77,6 +78,7 @@ h1{
 
 .info-data{
     align-self: center;
+    color: #D5A021;
 }
 
 /* 
