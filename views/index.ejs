@@ -1,27 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <%- include('./partials/head.ejs')%>
 </head>
 <body>
-    <div>
-        <h1>
-            <%= data.distro %>
-        </h1>
-        <h4>
-            <%= data.release %>
-        </h4>
-        <h4>
-            <%= data.build %>
-        </h4>
-        <h4>
-            <%= data.platform %>
-        </h4>
-
-        
-    </div>
-
+    <nav class="nav">
+        <ul>
+            <li>
+                <a href="/cpu_info">CPU Info</a>
+            </li>
+            <li>
+                <a href="/os_info">OS Info</a>
+            </li>
+        </ul>
+    </nav>
+    <% if (data != undefined) { %>
+        <div class='container'>
+            <h1><%= data.title %> </h1>
+            <div class="data-container">
+                <% value = Object.keys(data) %>
+                <% for (i = 0;i< value.length-1;i++) { %> 
+                    <div class="info-group">
+                        <div class="info-head"><%= value[i] %></div>
+                        <div class="info-data">
+                            <% if (data[value[i]] != '') { %>
+                            <%= data[value[i]] %>
+                            <% } else{ %> 
+                                N/A 
+                            <% } %> 
+                        </div>
+                    </div>
+                <% } %>
+            </div>
+        </div>
+    <% } %>
 </body>
 </html>
