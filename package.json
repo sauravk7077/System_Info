@@ -23,7 +23,7 @@
   "homepage": "https://github.com/sauravk7077/System_Info#readme",
   "dependencies": {
     "ejs": "^3.1.3",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "systeminformation": "^4.27.11"
   }
 }
